@@ -38,7 +38,7 @@ class ParseFileFn(beam.DoFn):
         dictionary = {key: value for (key, value) in zip(self.headers, row)}
         logging.info(dictionary)
         yield dictionary
-
+        
 
 def run(argv=None):
     """Pipeline for reading data from a Cloud Storage bucket and writing the results to BigQuery"""
